@@ -1,6 +1,7 @@
 <?php
 
-include_once("phayes-geoPHP-6855624/geoPHP.inc");
+require __DIR__ . '/vendor/autoload.php';
+
 $bboxes = geoPHP::load(file_get_contents("aonb-bboxes.wkt", "wkt"));
 
 
