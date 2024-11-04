@@ -1,8 +1,8 @@
 <?php
 
-include_once("phayes-geoPHP-6855624/geoPHP.inc");
+require __DIR__ . '/vendor/autoload.php';
 
-$json = file_get_contents('AONBs.geojson');
+$json = file_get_contents('Areas_of_Outstanding_Natural_Beauty_England_6441771052448718089.geojson');
 $geo = geoPHP::load($json,'json');
 $bboxes = array();
 
