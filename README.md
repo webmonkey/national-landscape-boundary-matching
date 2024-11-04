@@ -10,4 +10,4 @@ To get at the different area labels we need to parse the JSON then iterate over 
  - [x] Document details of GeoJSON input file
  - [x] Match specific AONBs
  - [x] Use bounding boxes to simplify lookups
- - [ ] Speed up matching using MySQL or indexes
+ - [x] Speed up matching using MySQL or indexes
