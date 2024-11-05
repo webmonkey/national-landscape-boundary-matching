@@ -1,7 +1,7 @@
 # National Landscape (AONB) boundary matching
 
 ## Libraries
-To install GeoJSON use composer and `composer require phayes/geophp`
+To install GeoJSON use composer and run `composer install`
 
 ## Input file
 The input is taken as a GeoJSON file from [DEFRA](https://naturalengland-defra.opendata.arcgis.com/datasets/6f2ad07d91304ad79cdecd52489d5046_0/explore).
