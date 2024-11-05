@@ -11,13 +11,13 @@ if ($loadPolygons) {
     $json = file_get_contents('Areas_of_Outstanding_Natural_Beauty_England_6441771052448718089.geojson');
 
     $parsed = json_decode($json);
-    $naturalLandscapes = array();
+    $nationalLandscapes = array();
 
     foreach ($parsed->features as $feature) {
         $name = $feature->properties->NAME;
         print("Loading $name". PHP_EOL);
         $geo = geoPHP::load(json_encode($feature),'json');
-        $naturalLandscapes[$name] = $geo;
+        $nationalLandscapes[$name] = $geo;
     }
 }
 
@@ -38,9 +38,9 @@ foreach ($points as $pointName => $wkt) {
     print("bbox: $pointName might be in an AONB". PHP_EOL);
     
     if ($loadPolygons) {
-        foreach($naturalLandscapes as $naturalLandscapeName => $naturalLandscape) {
-            if ($point->intersects($naturalLandscape)) {
-                print("$pointName is definitely in $naturalLandscapeName". PHP_EOL);
+        foreach($nationalLandscapes as $nationalLandscapeName => $nationalLandscape) {
+            if ($point->intersects($nationalLandscape)) {
+                print("$pointName is definitely in $nationalLandscapeName". PHP_EOL);
                 break;
             }
         }

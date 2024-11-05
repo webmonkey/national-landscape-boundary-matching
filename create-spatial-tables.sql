@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS natural_landscapes;
-CREATE TABLE natural_landscapes (
+DROP TABLE IF EXISTS national_landscapes;
+CREATE TABLE national_landscapes (
     name VARCHAR(100) NOT NULL,
     boundary GEOMETRY NOT NULL SRID 4326,
 
